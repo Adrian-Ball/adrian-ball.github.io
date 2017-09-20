@@ -2,6 +2,7 @@
 layout: post
 title: "Site Goes Live"
 date: 2017-09-16
+type: blog
 ---
 
 Hello, 
