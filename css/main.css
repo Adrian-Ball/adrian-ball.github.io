@@ -1,11 +1,10 @@
 body {
     margin: 60px auto;
     width: 70%;
-    //background-color: #969696; /* Hexadecimal value */
-    background-color: #696969;
+    background-color: #D5D5D5;
 }
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+	font-family: 'Computer Modern';
     padding: 0px;
     list-style: none;
     font-weight: bold;
@@ -16,22 +15,26 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #999;
+    //color: #999;
+	color: #6D7993;
 }
 a:hover {
     text-decoration: underline;
 }
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+	//https://stackoverflow.com/questions/6476351/how-to-use-the-computer-modern-font-in-webpages
+    font-family: 'Computer Modern';
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
 }
 p {
-    font-size: 1.5em;
+	font-family: 'Computer Modern';
+	font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
 }
 footer {
-    border-top: 1px solid #d5d5d5;
+    border-top: 1px solid #565656;
     font-size: .8em;
 }
 
