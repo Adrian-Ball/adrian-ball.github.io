@@ -27,6 +27,14 @@ h1 {
     font-family: 'Computer Modern';
     src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
 }
+h2 {
+    font-size: 2.5em;
+    font-family: 'Computer Modern';
+}
+h3 {
+    font-size: 2em;
+    font-family: 'Computer Modern';
+}
 p {
 	font-family: 'Computer Modern';
 	font-size: 1.5em;
