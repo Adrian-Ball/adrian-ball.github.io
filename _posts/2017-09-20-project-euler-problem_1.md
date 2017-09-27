@@ -39,7 +39,7 @@ Now all we need to do is figure out the formula for an arithmetic series.
 
 Suppose that $$s_n$$ is the sum of our series, then we have
 
-$$ s_n = (a 0b) + (a + b) + (a + 2b) + ... + (a + (n-1)b)$$
+$$ s_n = (a + 0b) + (a + b) + (a + 2b) + ... + (a + (n-1)b)$$
 
 where $$a$$ is our initial term, $$b$$ is the constant growth of our terms and $$n$$ is the number of terms in our series. But we could also rewrite the above as
 
@@ -48,8 +48,6 @@ $$ s_n = (l - 0b) + (l - b) + (l - 2b) + ... + (l - (n-1)b)$$
 where $$l$$ is the last term in our original series ($$l = a + (n-1)b$$).
 
 Combining the two gives
-
-$$ 2s_n = a + (a + b) + (a + 2b) + ... + (a + (n-1)b)$$
 
 $$\begin{eqnarray} 
 2s_n =& a + (a + b) + (a + 2b) + ... + (a + (n-1)b)      \\
