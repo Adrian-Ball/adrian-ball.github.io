@@ -31,21 +31,22 @@ To start to build a solution, lets look at adding up all numbers that are a mult
 
 $$ 3 + 6 + 9 + ... + 999 $$
 
-Factoring out the 3, we get
+Rewriting this, we get
 
-$$ 3(1 + 2 + 3 + ... + 333) $$
+$$ 3 + (3+1\cdot3) + (3+2\cdot3) + ... + (3+332\cdot3) $$
+
 
 Now all we need to do is figure out the formula for an arithmetic series.
 
-Suppose that $$s_n$$ is the sum of our series, then we have
+More generally, suppose that $$s_n$$ is the sum of our series, then we have
 
-$$ s_n = (a + 0b) + (a + b) + (a + 2b) + ... + (a + (n-1)b)$$
+$$ s_n = (a + 0 \cdot b) + (a + 1\cdot b) + (a + 2\cdot b) + ... + (a + (n-1)b)$$
 
-where $$a$$ is our initial term, $$b$$ is the constant growth of our terms and $$n$$ is the number of terms in our series. But we could also rewrite the above as
+where $$a$$ is our initial term, $$b$$ is the constant growth of our terms and $$n$$ is the number of terms in our series (in the 3's example, $$ a = 3 $$, $$ b = 3 $$, $$ n = 333 $$). But we could also rewrite the above as
 
 $$ s_n = (l - 0b) + (l - b) + (l - 2b) + ... + (l - (n-1)b)$$
 
-where $$l$$ is the last term in our original series ($$l = a + (n-1)b$$).
+where $$l$$ is the last term in our original series ($$l = a + (n-1)b$$) and we count down from the largest number instead of up from the smallest number.
 
 Combining the two gives
 
