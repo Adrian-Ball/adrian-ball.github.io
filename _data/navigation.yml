@@ -1,10 +1,5 @@
 # Site navigation links
 
-- title: Blog
-  url: /blog/
-  excerpt: "My Blog!"
-  image: 300x200.gif
-
 - title: CV
   url: /cv/
   excerpt: "My Curriculum Vitae"
