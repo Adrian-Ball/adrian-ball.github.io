@@ -1,0 +1,26 @@
+# Site navigation links
+
+- title: Blog
+  url: /blog/
+  excerpt: "My Blog!"
+  image: 300x200.gif
+
+- title: CV
+  url: /cv/
+  excerpt: "My Curriculum Vitae"
+  image:
+
+- title: Project Euler
+  url: /project-euler/
+  excerpt: "Project Euler Stuff"
+  image:
+
+- title: Go
+  url: /go/
+  excerpt: "Go Where?!"
+  image:
+
+- title: Eve Online
+  url: /eve-online/
+  excerpt: "Eve Online Things"
+  image:
