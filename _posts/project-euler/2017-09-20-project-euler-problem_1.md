@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: article
 title: "Problem 1"
 date: 2017-09-20
 categories: project-euler
+author: adrian-ball
 ---
 
 The problem can be found [here](https://projecteuler.net/problem=1). Paraphrased, we want to find the sum of all natural numbers below 1000 that are a multiple of 3 or 5. 
@@ -11,7 +12,7 @@ Being the first problem of the site, the logic for solving this problem is fairl
 
 Writing this in Python, we could do something like the following: 
 
-```
+{% highlight python %}
 n = 1000; 
 #Initialise the answer
 answer = 0;
@@ -21,7 +22,7 @@ for count in range(1,n):
         answer = answer + count
         
 print('The answer is:',answer)
-```
+{% endhighlight %}
 
 While the above is straightforward, it is worth making a few observations here. We only need to iterate across all of the numbers once, keeping the code clean. Also, by only checking each number only once, we won't run into the possibility of including each number more than once. 
 
@@ -68,7 +69,7 @@ $$ s_n = \frac{n(a+l)}{2}$$
 
 Now that we have this formula, we just have to plug in the values. We will want to add the sum of the series that were multiple of 3 and 5 and then subtract the sum of numbers that were a multiple of 15 so that they are not included twice. I have done this in the code below, where arithmetic_sum(first, last, num) is the self described function.
 
-```
+{% highlight python %}
 #We will want to make use of the arithmetic sum here
 from arithmetic_sum import arithmetic_sum
 
@@ -79,9 +80,7 @@ answer = arithmetic_sum(3,(n//3)*3,n//3)   \
          - arithmetic_sum(15,(n//15)*15,n//15)
 
 print('The answer is:',int(answer))
-```
-
-
+{% endhighlight %}
 
 
 
