@@ -4,6 +4,8 @@ title: "Problem 1"
 date: 2017-09-20
 categories: project-euler
 author: adrian-ball
+image:
+  teaser: crayon-numbers.png
 ---
 
 The problem can be found [here](https://projecteuler.net/problem=1). Paraphrased, we want to find the sum of all natural numbers below 1000 that are a multiple of 3 or 5. 
