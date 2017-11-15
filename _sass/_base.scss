@@ -188,6 +188,13 @@ figcaption {
   }
 }
 
+/* I added this to center images */
+.center-image
+{
+  margin: 0 auto;
+  display: block;
+}
+
 .half,
 .third {
   & figcaption { /* Remove caption indents */
