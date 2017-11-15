@@ -17,7 +17,7 @@ The figure below shows an example for a rectangular grid with 2 rows and 3 colum
 
 The challenge now is to see if we can find an equation that provides us the number of sub-rectangles in a rectangular grid of arbitrary size. We will assume that such a grid has $$m$$ rows and $$n$$ columns. To start, we will try to calculate the number of sub-rectangles of particular sizes and see if we can observe a pattern.
 
-For a $$1\times1$$ rectangle, there are obviously $$mn$$ potential options. For a $$1\times2$$ sub-rectangle, on one row, there are now $$n-1$$ options for where that sub-rectangle can be placed. Doing this for all $$m$$ rows means that there are $$m(n-1)$$ sub-rectangles of size $$n-1$$. Looking at sub-rectangels of size $$1\times1$$ to $$1\times n$$, we get the following:
+For a $$1\times1$$ rectangle, there are obviously $$mn$$ potential options. For a $$1\times2$$ sub-rectangle, on one row, there are now $$n-1$$ options for where that sub-rectangle can be placed. Doing this for all $$m$$ rows means that there are $$m(n-1)$$ sub-rectangles of size $$n-1$$. Looking at sub-rectangles of size $$1\times1$$ to $$1\times n$$, we get the following:
 
 $$\begin{eqnarray} 
 1\times1 =& m\times n  \\
