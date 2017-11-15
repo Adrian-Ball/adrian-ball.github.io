@@ -5,11 +5,11 @@ date: 2017-11-16
 categories: project-euler
 author: adrian-ball
 image:
-  teaser: crayon-numbers.png
-  feature: crayon-numbers-banner.png
+  teaser: project-euler/problem-85/wooden-toys-original.jpg
+  feature: project-euler/problem-85/wooden-toys-banner.jpg
 ---
 
-In [this](https://projecteuler.net/problem=85) problem we are interested in counting the number of sub-rectangles in a rectangular grid. Specifically, we are interested in the area of the grid that yields the closest possible sum of sub-rectangles to two million. I know this is a random problem to write up after Problem 1, however I had recently re-solved this problem on the train by accident and the solution also makes use of arithmetic series, so we can exploit that straight away!
+In [this](https://projecteuler.net/problem=85) problem we are interested in counting the number of sub-rectangles in a rectangular grid. Specifically, we are interested in the area of a grid that yields the closest possible sum of sub-rectangles to two million. I know this is a random problem to write up after Problem 1, however I had recently re-solved this problem on the train by accident and the solution also makes use of arithmetic series, so we can exploit that straight away!
 
 The figure below shows an example for a rectangular grid with 2 rows and 3 columns. For a grid of this shape, there are 18 sub-rectangles.
 
@@ -41,7 +41,7 @@ Completing this process would give us the number of sub-rectangles in the origin
 
 $$\begin{eqnarray}  
 S =& \frac{m(m+1)}{2} \frac{n(n+1)}{2} \\
-  =& \frac{mn(m+1)(n+1)}{4}
+  =& \frac{m(m+1)n(n+1)}{4}
 \end{eqnarray}$$
 
 where $$S$$ is the sum of all sub-rectangles in a rectangular grid of $$m$$ rows and $$n$$ columns.
@@ -51,14 +51,23 @@ From here, we just have to evaluate this equation for rectangular grids of diffe
 {% highlight python %}
 #We will want to make use of the arithmetic sum here
 from arithmetic_sum import arithmetic_sum
+import math
 
-n = 999; 
+answer = 0
+distance_to_2mil = 2000000
 
-answer = arithmetic_sum(3,(n//3)*3,n//3)   \
-         + arithmetic_sum(5,(n//5)*5,n//5) \
-         - arithmetic_sum(15,(n//15)*15,n//15)
-
-print('The answer is:',int(answer))
+limit_i = math.ceil(math.sqrt(2000000))
+for i in range(1,limit_i):
+    limit_j = round(2000000/i)
+    for j in range(1,limit_j):
+        term_1 = arithmetic_sum(1,i,i)
+        term_2 = arithmetic_sum(1,j,j)
+        num_rectangles = term_1 * term_2
+        if abs(num_rectangles - 2000000) < distance_to_2mil:
+            distance_to_2mil = abs(num_rectangles - 2000000)
+            answer = i*j
+        
+print('The answer is:',answer)
 {% endhighlight %}
 
 
