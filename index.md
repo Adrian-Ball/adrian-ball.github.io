@@ -3,7 +3,7 @@ layout: archive
 permalink: /
 title: "Latest Posts"
 image:
-  feature: stupio_panorama_banner.jpg
+  feature: stupio_panorama_banner.jpg 
 ---
 
 <div class="tiles">
