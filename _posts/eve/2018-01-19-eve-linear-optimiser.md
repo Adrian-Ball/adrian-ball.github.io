@@ -2,7 +2,7 @@
 layout: article
 title: "Capitalising on Linear Optimisation!"
 date: 2018-01-19
-categories: eve
+categories: eve-online
 author: adrian-ball
 image:
   teaser: eve/leviathan_over_london_teaser.jpg
