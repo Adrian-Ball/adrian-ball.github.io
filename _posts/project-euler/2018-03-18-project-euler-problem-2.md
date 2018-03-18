@@ -39,14 +39,14 @@ print(answer)
 
 {% endhighlight %}
 
-While this definitely works and is relatively straightforwards, there is some room for improvement. Looking at the initial values of the Fibonacci sequence, it looks like the even numbers are every third value. It doesn't take much to prove this, so we will do so for rigour. 
+While this definitely works and is relatively straightforward, there is some room for improvement. Looking at the initial values of the Fibonacci sequence, it looks like the even numbers are every third value. It doesn't take much to prove this, so we will do so for rigour. 
 
 There are two main points to note: 
 
 * The sum of two odd numbers is an even number, 
 * The sum of an even and odd number is an odd number.
 
-Therefore, if $$F_{n-2}$$ is odd (or even), and $$F_{n-1}$$ is even (or odd), $$F_n$$ will be an odd number. If both $$F_{n-2}$$ and $$F_{n-1}$$ are odd, then $$F_{n}$$ will be even. Representing the series as a patter of odd's and even's, and noting that the first two numbers are odd and even respectively, we get:
+Therefore, if $$F_{n-2}$$ is odd (or even), and $$F_{n-1}$$ is even (or odd), $$F_n$$ will be an odd number. If both $$F_{n-2}$$ and $$F_{n-1}$$ are odd, then $$F_{n}$$ will be even. Representing the series as a pattern of odd's and even's, and noting that the first two numbers are odd and even respectively, we get:
 
 $$\begin{eqnarray} 
 ODD + &EVEN = &ODD     \\
@@ -54,7 +54,7 @@ ODD + &EVEN = &ODD     \\
      & &ODD + ODD = EVEN\\
 \end{eqnarray}$$
 
-We can see that the fourth item in this series is the same as the first, so we see that we do indeed have a cyclical patter of $$ ODD, ODD, EVEN $$ as observed earlier. Given this, if we can modify the original Fibonacci formula to reference every third value, and initialise on an even number, then we will not need to check every value. 
+We can see that the fourth item in this series is the same as the first, showing that we do indeed have a cyclical pattern of $$ ODD, ODD, EVEN $$ as observed earlier. Given this, if we can modify the original Fibonacci formula to reference every third value, and initialise on an even number, then we will not need to check every value. 
 
 To start, recall that
 
