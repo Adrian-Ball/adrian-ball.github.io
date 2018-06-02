@@ -5,6 +5,11 @@
   excerpt: "My Curriculum Vitae"
   image:
 
+- title: General
+  url: /general/
+  excerpt: "Unsorted Articles"
+  image:
+
 - title: Project Euler
   url: /project-euler/
   excerpt: "Project Euler Stuff"
