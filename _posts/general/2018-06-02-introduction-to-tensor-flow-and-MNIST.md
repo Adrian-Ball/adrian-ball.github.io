@@ -15,7 +15,7 @@ To work on covering this gap in my understanding, I have built a simple neural n
 
 <h5> Tensorflow</h5>
 
-[Tensorflow](https://www.tensorflow.org/) is an open source software library, originally produced by Google, designed for high performance numerical calculations. This library is appealing as it makes running machine learning processes on the GPU a relatively straight forward process. This is particularly appealing when developing deep learning/neural network models, as a GPU is faster than a CPU and can handle large matrix operations (which form the core of a deep learning model). While there are several libraries that allow for this to happen, the popularity of the Tensorflow library in particular means that there is good community sup
+[Tensorflow](https://www.tensorflow.org/) is an open source software library, originally produced by Google, designed for high performance numerical calculations. This library is appealing as it makes running machine learning processes on the GPU a relatively straight forward process. This is particularly appealing when developing deep learning/neural network models, as a GPU is faster than a CPU and can handle large matrix operations (which form the core of a deep learning model). While there are several libraries that allow for this to happen, the popularity of the Tensorflow library in particular means that there is good community support.
 
 <h5> Docker</h5>
 
@@ -29,9 +29,9 @@ The [MNIST data set](http://yann.lecun.com/exdb/mnist/) is a set of hand written
 
 <h5> Writing the code </h5>
 
-This code was written (with a few minor variations, like adding another layer) while following a tutorial that was presented [here](https://pythonprogramming.net/tensorflow-introduction-machine-learning-tutorial/). The linked tutorial is highly detailed, and is presented both in text and as a video. For those looking to get started, this was a fantastic source from an application perspective.
+This code was written (with a few minor variations, like adding another layer) while following a tutorial that was presented [here](https://pythonprogramming.net/tensorflow-introduction-machine-learning-tutorial/). The linked tutorial is highly detailed, and is presented both in text and as a video. For those looking to get started, this was a fantastic source of information, and I found the guy relatively easy to listen to.
 
-There are two main sections required to get this to work, defining and training the model. Again, steps like data pre-processing are not needed here as the data set has been cleaned and normalised for us. 
+There are two main sections required to get this to work, defining and training the model. Again, steps like data pre-processing are not needed here as the data set has been cleaned and normalised for us. The code snippet for setting up the model is presented here. In this example I have opted for four fully connected layers, and defined how to pipe data through the model from input data (picture of a number), through the four hidden layers, to the output (classification) layer.
 
 {% highlight python %}
 
@@ -69,6 +69,9 @@ def nn_model(data):
 
 {% endhighlight %}
 
+With the model now defined, the training process can configured, and is shown below. Here, we are trying to assign weights to the model so that we can maximise our classification rating (which is equivalent to minimising the cost). This is an iterable process, and ideally we would run it until the minimum cost had been found. However, for this example, we will just take the model as is after 20 iterations. Once the model has been trained, I had a classification accuracy of approximately 95%, which is not bad for the expended programming effort (though still nowhere near state-of-the-art accuracy).
+
+One difference here from the tutorial site, eluded to in the code, is that I have changed how the model accuracy is calculated. When trying to do this in one go, the process crashes due to being out of memory. This solution was presented by Chin-Chang Yang at the [Stack Exchange link](https://github.com/tensorflow/tensorflow/issues/136) in the code snippet. This was a strange error to sort out as I have followed the afore mentioned Tensorflow guide before, on the same machine, and did not have any issues. From what I have been able to deduce, the problem arises due tue working with Tensorflow 1.8 and/or working in a Docker environment. 
 
 {% highlight python %}
 
@@ -102,11 +105,15 @@ def train_neural_network(x):
     
         for i in range(batch_num):
             batch = mnist.test.next_batch(batch_size)
-            test_accuracy += accuracy.eval(feed_dict={x: batch[0],
-                                              y: batch[1]})
-                                              #keep_prob: 1.0})
+            test_accuracy += accuracy.eval(feed_dict={x: batch[0], y: batch[1]})
 
         test_accuracy /= batch_num
         print("test accuracy %g"%test_accuracy)
 
 {% endhighlight %}
+
+<h5> Final thoughts </h5>
+
+The biggest hassle with getting everything up and running was trying to get all the prerequisite packages installed and working together. Getting something simple like this up and running was fairly straightforwards given that I had a good community tutorial to follow. Tensorflow is fantastic for allowing a user to build models, while hiding the complex matrix math required to make the whole process work. 
+
+However, having spent some time on other projects (which will appear here when fully documented and completed), and looking over various configuration options, it seems like there are nicer ways to build and train models. One example is to use [Keras](https://keras.io/), a front end API package that can work with Tensorflow. Not only does Keras have far superior documentation (Tensorflow documentation leaves a lot to be desired), but it also provides a cleaner, less error-prone interface for defining common complex models (such as LSTM's, a model used for sequential learning, such as sentence prediction). As such, the plan from here is to repeat this tutorial example under a couple of these different configuration options, such as using Keras or writing a script in Julia. Hopefully, achieving the same objective through different implementations will provide exposure to alternate tools, and expand my understanding of neural network models even further. 
