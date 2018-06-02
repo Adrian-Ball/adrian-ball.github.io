@@ -5,8 +5,8 @@ date: 2018-06-02
 categories: general
 author: adrian-ball
 image:
-  teaser: eve/leviathan_over_london_teaser.jpg
-  feature: eve/leviathan_over_london_banner.jpg
+  teaser: general/MNIST/MnistExamples_teaser.png
+  feature: general/MNIST/MnistExamples_banner.png
 ---
 
 Neural networks have gained a lot of traction in the past years, yet have remained a machine learning technique that I have not had a chance to learn and play with until recently.  One of the most popular applications of this has been the development of [AlphaGo](https://www.nature.com/articles/nature16961), a bot that has repeatedly bested the best humans in the world at the board game Go. There are already several good resources that explain neural networks, such as [here](https://ujjwalkarn.me/2016/08/09/quick-intro-neural-networks/) for a blog, or [here](http://www.deeplearningbook.org/) for an online textbook. In short though, neural networks are a series of layers that perform a linear function on the data from the previous layer and then a non-linear function. These networks are trained with large amounts of data, and are often used for supervised learning problems.
@@ -23,8 +23,8 @@ Docker is an application that 'performs operating-system-level virtualization al
 
 The installation of everything in order to get Tensorflow to work was a real nightmare for me. Several packages need to be installed, each of which have several versions, and they have a tendency to not play well together. Docker was suggested to me (Thanks Brandon!) as an option for setting up an 'image' where all kinks in driver configuration have already been sorted, which means I can now have the desired environment in essentially one command now.
 
-
 <h5> MNIST </h5>
 
 The [MNIST data set](http://yann.lecun.com/exdb/mnist/) is a set of hand written digits split into a training and test groups. The data has been normalised such that each image contains only one number, and each image is the same size of 28*28 pixels. This makes the data set attractive for testing new machine learning techniques as data pre-processing and cleaning steps have already been performed. 
 
+<h5> Writing the code </h5>
