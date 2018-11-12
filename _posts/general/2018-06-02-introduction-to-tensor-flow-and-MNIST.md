@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "My First Neural Network, Tensorflow, and the MNIST Dataset"
+title: "Tensorflow and the MNIST Dataset"
 date: 2018-06-02
 categories: general
 author: adrian-ball
