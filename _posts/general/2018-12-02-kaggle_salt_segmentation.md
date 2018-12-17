@@ -17,7 +17,7 @@ Given that this was my first competition and that I would only be able to work o
 
 For this challenge, I chose to build a [U-net model](https://arxiv.org/abs/1505.04597), as their ability to perform image segmentation suits the given challenge. At a high level, U-nets are a convolutional neural network model where for each layer, the X and Y dimensions slowly decrease and the number of filters (Z dimension) increases relative to the previous layer. Once this process has happened a few times (the extent of this decreasing is a model hyper-parameter), the opposite then happens, with layer X and Y dimensions increasing as the number of filters decreases. Finally, there is a layer at the end for per-pixel classification based on the segmentation. An image of an example u-net (from the linked paper) encapsulating this process is shown below.
 
-![U-net model](../../../../images/general/kaggle/salt_segmentation/u-net.png){: .center-image}
+![U-net model](../../../../images/general/kaggle/salt_segmentation/u-net.PNG){: .center-image}
 
 <h5> Data Loading and Segmentation </h5>
 
