@@ -15,12 +15,12 @@
   excerpt: "Solutions to Project Euler problems"
   image:
 
-- title: Go
-  url: /go/
-  excerpt: "Go Where?!"
-  image:
-
 - title: Eve Online
   url: /eve-online/
   excerpt: "Eve Online Things"
+  image:
+
+- title: Links
+  url: /useful-links/
+  excerpt: "General storage place for useful references etc"
   image:
