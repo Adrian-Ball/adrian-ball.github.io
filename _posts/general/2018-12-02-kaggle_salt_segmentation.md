@@ -4,6 +4,7 @@ title: "Kaggle: Salt Segmentation"
 date: 2018-12-02
 categories: general
 author: adrian-ball
+comments: true
 image:
   teaser: general/kaggle/salt_segmentation/salt_teaser.jpg
   feature: general/kaggle/salt_segmentation/salt_banner.jpg
@@ -247,3 +248,26 @@ One thing that I found difficult in this competition (particularly as I invested
 As a consequence of this, I spent a lot of my time looking at methods that might be more suitable to handle this, rather than working on the competition itself. An interesting tool that I came across was [Pachyderm](http://www.pachyderm.io/), a tool for the management of multi-stage data pipelines ([DVC](https://dvc.org/) is another option). The idea with these tools would be to set up a data processing pipeline, while keeping the project as modular as possible. This would allow for easy implementation of new ideas, there would be minimal refactoring or rerunning of code, allowing for a more thorough and cleaner method for model generation. This is definitely something that I want to implement in a similar future competition.
 
 I would like to close out this article with a general thanks to the Kaggle community and in particular those that took part in this competition. Without this community, there would have been no competition, no forum for discussion of ideas focused on a particular topic, and I would not have been able to learn new skills and apply myself to different challenges.
+
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-adrian-ball-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %} 

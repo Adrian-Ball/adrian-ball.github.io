@@ -4,6 +4,7 @@ title: "Tensorflow and the MNIST Dataset"
 date: 2018-06-02
 categories: general
 author: adrian-ball
+comments: true
 image:
   teaser: general/MNIST/MnistExamples_teaser.png
   feature: general/MNIST/MnistExamples_banner.png
@@ -117,3 +118,26 @@ def train_neural_network(x):
 The biggest hassle with getting everything up and running was trying to get all the prerequisite packages installed and working together. Getting something simple like this up and running was fairly straightforwards given that I had a good community tutorial to follow. Tensorflow is fantastic for allowing a user to build models, while hiding the complex matrix math required to make the whole process work. 
 
 However, having spent some time on other projects (which will appear here when fully documented and completed), and looking over various configuration options, it seems like there are nicer ways to build and train models. One example is to use [Keras](https://keras.io/), a front end API package that can work with Tensorflow. Not only does Keras have far superior documentation (Tensorflow documentation leaves a lot to be desired), but it also provides a cleaner, less error-prone interface for defining common complex models (such as LSTM's, a model used for sequential learning, such as sentence prediction). As such, the plan from here is to repeat this tutorial example under a couple of these different configuration options, such as using Keras or writing a script in Julia. Hopefully, achieving the same objective through different implementations will provide exposure to alternate tools, and expand my understanding of neural network models even further. 
+
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-adrian-ball-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %} 

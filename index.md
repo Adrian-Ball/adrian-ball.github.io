@@ -14,6 +14,6 @@ Hello and welcome to my personal site. I have built this site so that I can have
 
 <div class="tiles">
 {% for post in site.posts %}
-	{% include post-grid.html %}
+  {% include post-grid.html %}
 {% endfor %}
 </div><!-- /.tiles -->

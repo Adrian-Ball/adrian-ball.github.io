@@ -4,6 +4,7 @@ title: "Keras and the MNIST Dataset"
 date: 2018-11-11
 categories: general
 author: adrian-ball
+comments: true
 image:
   teaser: general/MNIST/MnistExamples_teaser.png
   feature: general/MNIST/MnistExamples_banner.png
@@ -134,3 +135,26 @@ print('Model accuracy is', score[1])
 
 
 In conclusion, it was significantly easier to get a model up and running using Keras rather than native Tensorflow. The significant difference between the two models was the clarity and conciseness of the code when working in Keras (plus Keras also has fantastic documentation). Not only does this make is easier to conceptualise and understand what is happening with the model, but the ease of understanding also helps to speed up model design iteration. Though I also want to look at this model again in Julia, for now all standard neural net models that I generate will be done through Keras and not native Tensorflow. 
+
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-adrian-ball-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %} 
