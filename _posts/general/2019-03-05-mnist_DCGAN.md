@@ -189,7 +189,7 @@ In this post, I have developed a simple DCGAN model to generate images of numeri
 
 In the samples presented, there are also a lot of generated 0's and 1's. I believe that these occur the most as they are the most general shapes and therefore the easiest to learn. This means that these images are the easiest to trick the discriminator into classifying as true. It is possible that further training would allow for more detailed features to be learned, allowing for more complex numbers like 8 to be 'drawn' better. 
 
-Finally, it is also worth noting that more than almost three quarters of the generated images are either 0 or 1. Part of this is likely due to the strength of the model in generating these shapes. However, the more noteworthy aspect is that the objective of the generator model is only to produce numberical images that trick the generator, not to produce a balanced sample of all images. 
+Finally, it is also worth noting that more than almost three quarters of the generated images are either 0 or 1. Part of this is likely due to the strength of the model in generating these shapes. However, the more noteworthy aspect is that the objective of the generator model is only to produce numerical images that trick the generator, not to produce a balanced sample of all images. 
 
 I hope that this post has provided some insight into GANs, their strengths, and how such a model might be developed. Thanks for reading! 
 
