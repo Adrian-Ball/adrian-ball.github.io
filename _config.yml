@@ -36,6 +36,10 @@ owner:
   avatar: bio-photo.jpg # 160x160 px image for author byline
   disqus-shortname: https-adrian-ball-github-io
 
+analytics:
+  provider: "google-universal"
+  google:
+ 	tracking_id: "UA-153076148-1"
 
 include:
   - .htaccess
