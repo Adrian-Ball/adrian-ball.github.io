@@ -39,7 +39,7 @@ owner:
 analytics:
   provider: "google-universal"
   google:
- 	tracking_id: "UA-153076148-1"
+ 	  tracking_id: "UA-153076148-1"
 
 include:
   - .htaccess
