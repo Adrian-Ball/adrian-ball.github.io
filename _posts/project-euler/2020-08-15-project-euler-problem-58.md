@@ -10,13 +10,13 @@ image:
   feature: project-euler/problem-58/ulam-banner.png
 ---
 
-In [this](https://projecteuler.net/problem=58) problem, we are looking at the diagonal values of an counter-clockwise spiral (example shown below), and counting how many of them are prime. In the shown example, eight of the thirteen numbers are prime, i.e., 62%, and we are tasked with finding what the side length of the square spiral is when the ratio of primes first drops below 10%.
+In [this](https://projecteuler.net/problem=58) problem, we are looking at the diagonal values of a counter-clockwise spiral (example shown below), and counting how many of them are prime. In the shown example, eight of the thirteen numbers are prime, i.e., 62%, and we are tasked with finding what the side length of the square spiral is when the ratio of primes first drops below 10%.
 
 <p align="center">
   <img width="200" height="200" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Ulam_spiral_howto_all_numbers.svg/200px-Ulam_spiral_howto_all_numbers.svg.png">
 </p>
 
-For some history, this type of spiral when the primes are singled out is known as an Ulam spiral (Originating from [this](https://www.semanticscholar.org/paper/A-VISUAL-DISPLAY-OF-SOME-PROPERTIES-OF-THE-OF-Stein-Ulam/76879c5908f7d8e289642b0ab8943529eb39e1d9) paper). Ulam thought that there was a non-random pattern that appeared in such a spiral. An image of a 399x399 spiral is shown below. 
+For some history, this type of spiral when the primes are singled out is known as an Ulam spiral (originating from [this](https://www.semanticscholar.org/paper/A-VISUAL-DISPLAY-OF-SOME-PROPERTIES-OF-THE-OF-Stein-Ulam/76879c5908f7d8e289642b0ab8943529eb39e1d9) paper). Ulam thought that there was a non-random pattern that appeared in such a spiral. An image of a 399x399 spiral is shown below. 
 
 <p align="center">
   <img width="400" height="400" src="https://mathworld.wolfram.com/images/gifs/primesp.jpg">
@@ -50,7 +50,7 @@ $$
 \end{aligned}
 $$
 
-where $$n$$ is the side length of the square. Note that we dont have to check the $n^2$ case, as it is obviously not a prime. 
+where $$n$$ is the side length of the square. Note that we don't have to check the $n^2$ case, as it is obviously not a prime. 
 
 Folding all this into a loop, we have the following:
 
