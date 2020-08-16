@@ -44,9 +44,9 @@ From here, each time we add a ring to the spiral (increasing the square side len
 $$
 \begin{aligned}
   & n^2 \\
-  & n^2 -1*(n+1)\\
-  & n^2 -2*(n+1)\\
-  & n^2 -3*(n+1)\\
+  & n^2 -1*(n-1)\\
+  & n^2 -2*(n-1)\\
+  & n^2 -3*(n-1)\\
 \end{aligned}
 $$
 
